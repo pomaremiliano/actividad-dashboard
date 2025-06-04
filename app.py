@@ -2,6 +2,7 @@ from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 from markdown_texts import markdown_texts
+# video demo: https://youtu.be/sbCHn9qbuJU
 
 # Cargar datos
 df = pd.read_csv("HRDataset_v14.csv")
