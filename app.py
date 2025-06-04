@@ -2,7 +2,10 @@ from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 from markdown_texts import markdown_texts
+
 # video demo: https://youtu.be/sbCHn9qbuJU
+
+app = Dash(__name__)
 
 # Cargar datos
 df = pd.read_csv("HRDataset_v14.csv")
@@ -124,8 +127,6 @@ fig10 = px.histogram(
 )
 fig10.update_layout(xaxis_tickangle=-45)
 
-# App
-app = Dash(__name__)
 
 app.layout = html.Div(
     [
@@ -209,4 +210,4 @@ app.layout = html.Div(
 )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
